@@ -1,6 +1,6 @@
 # Сети в Linux
 
-
+<img src="misc/images/part5_network.png" alt="part5_network" width="500"/>
 Пример таблицы маршрутизации для хоста eggplant:
 ```
 [root@eggplant ~]# netstat -rn
