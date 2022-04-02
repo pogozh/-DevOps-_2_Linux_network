@@ -157,18 +157,18 @@ HostMax 10.10.63.254
 ##### С помощью команды `ip a` посмотреть существующие сетевые интерфейсы
 - В отчёт поместить скрин с вызовом и выводом использованной команды.
 
-<img src="misc/images/p2002.png" alt="ip a" />  \
+<img src="misc/images/p2002.png" alt="ip a" />
 
 ##### Описать сетевой интерфейс, соответствующий внутренней сети, на обеих машинах и задать следующие адреса и маски: ws1 - `192.168.100.10`, маска `/16`, ws2 - `172.24.116.8`, маска `/12`
 - В отчёт поместить скрины с содержанием изменённого файла *etc/netplan/00-installer-config.yaml* для каждой машины.  \
 
-<img src="misc/images/p2001.png" alt="netplan" />\
+<img src="misc/images/p2001.png" alt="netplan" />
 
 ##### Выполнить команду `netplan apply` для перезапуска сервиса сети
 - В отчёт поместить скрин с вызовом и выводом использованной команды.  \
 `sudo netplan apply`
-\
-<img src="misc/images/p2003.png" alt="sudo netplan apply" />\
+
+<img src="misc/images/p2003.png" alt="sudo netplan apply" />
 
 
 #### 2.1. Добавление статического маршрута вручную
@@ -179,15 +179,15 @@ ws1:$`sudo ip route add 172.24.116.8 via 192.168.100.10 dev enp0s8`  \
 
 ws2:$`sudo ip route add 192.168.100.10 via 172.24.116.8 dev enp0s8`  \
 
-<img src="misc/images/p2004route.png" alt="sudo ip rout add" />  \
+<img src="misc/images/p2004route.png" alt="sudo ip rout add" />
 
 ws1:$`ping -c 4 172.24.116.8`
 
-<img src="misc/images/p2004ws1ping.png" alt="ws1 ping" />  \
+<img src="misc/images/p2004ws1ping.png" alt="ws1 ping" />
 
 ws2:$`ping -c 4  192.168.100.10`
 
-<img src="misc/images/p2004ws2ping.png" alt="ws2 ping" />  \
+<img src="misc/images/p2004ws2ping.png" alt="ws2 ping" />  
 
 
 #### 2.2. Добавление статического маршрута с сохранением
