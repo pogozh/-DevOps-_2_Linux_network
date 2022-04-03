@@ -184,8 +184,19 @@ ws2:$`ping -c 4  192.168.100.10`
 ##### Перезапустить машины
 ##### Добавить статический маршрут от одной машины до другой с помощью файла *etc/netplan/00-installer-config.yaml*
 - В отчёт поместить скрин с содержанием изменённого файла *etc/netplan/00-installer-config.yaml*.
+
+<img src="misc/images/p2200netplan.png" alt="netplan route" />
+
 ##### Пропинговать соединение между машинами
 - В отчёт поместить скрин с вызовом и выводом использованной команды.
+
+ws1:$`sudo netplan apply`
+ws1:$`netstat -rn`
+ws1:$`ping -c 3 172.24.116.8`
+ws2:$`sudo netplan apply`
+ws2:$`route -r`
+ws2:$`ping -c 4  192.168.100.10`
+<img src="misc/images/p2200ping.png" alt="ping" />
 
 ## Part 3. Утилита **iperf3**
 
