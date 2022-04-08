@@ -530,13 +530,13 @@ subnet 10.20.0.0 netmask 255.255.255.192
 
 `sudo mcedit /etc/dhcp/dhcpd.conf`
 
-<img title="" src="file:///C:/DO2_LinuxNetwork-0/misc/images/p6001.png" alt="">
+<img title="" src="../misc/images/p6001.png" alt="">
 
 ##### Указать MAC адрес у ws11, для этого в *etc/netplan/00-installer-config.yaml* надо добавить строки: `macaddress: 10:10:10:10:10:BA`, `dhcp4: true`
 
 Ректируем netplan'ы на ws11 и ws21
 
-<img title="" src="file:///C:/DO2_LinuxNetwork-0/misc/images/p6006netplans.png" alt="">
+<img title="" src="../misc/images/p6006netplans.png" alt="">
 
 ##### Перезагрузить службу **DHCP** командой `systemctl restart isc-dhcp-server`. Машину ws21 перезагрузить при помощи `reboot` и через `ip a` показать, что она получила адрес. Также пропинговать ws22 с ws21.
 
@@ -544,15 +544,15 @@ subnet 10.20.0.0 netmask 255.255.255.192
 
 `sudo systemctl status isc-dhcp-server`
 
-<img title="" src="file:///C:/DO2_LinuxNetwork-0/misc/images/p6005r2.png" alt="">
+<img title="" src="../misc/images/p6005r2.png" alt="">
 
-<img title="" src="file:///C:/DO2_LinuxNetwork-0/misc/images/p6005ws21.png" alt="">
+<img title="" src="../misc/images/p6005ws21.png" alt="">
 
 
 
 В r1 и r2 пришлость поменять hostname в файле /etc/hosts на корректные, что бы запустился resolv.
 
-<img title="" src="file:///C:/DO2_LinuxNetwork-0/misc/images/p6004hosts.png" alt="">
+<img title="" src="../misc/images/p6004hosts.png" alt="">
 
 `sudo systemctl start resolvconf`
 
@@ -560,27 +560,27 @@ subnet 10.20.0.0 netmask 255.255.255.192
 
 `sudo mcedit /etc/resolv.conf`
 
-<img title="" src="file:///C:/DO2_LinuxNetwork-0/misc/images/p6003.png" alt="">
+<img title="" src="../misc/images/p6003.png" alt="">
 
 `sudo systemctl restart resolvconf`
 
 `sudo systemctl status resolvconf`
 
-<img title="" src="file:///C:/DO2_LinuxNetwork-0/misc/images/p6003status.png" alt="">
+<img title="" src="../misc/images/p6003status.png" alt="">
 
 `sudo mcedit /etc/hosts`
 
-<img title="" src="file:///C:/DO2_LinuxNetwork-0/misc/images/p6004hosts.png" alt="">
+<img title="" src="../misc/images/p6004hosts.png" alt="">
 
 ##### Для r1 настроить аналогично r2, но сделать выдачу адресов с жесткой привязкой к MAC-адресу (ws11). Провести аналогичные тесты
 
-<img title="" src="file:///C:/DO2_LinuxNetwork-0/misc/images/p6001r1ws11.png" alt="">
+<img title="" src="../misc/images/p6001r1ws11.png" alt="">
 
 ##### Запросить с ws21 обновление ip адреса
 
 - В отчёте поместить скрины ip до и после обновления.
 
-<img title="" src="file:///C:/DO2_LinuxNetwork-0/misc/images/p6007ws21.png" alt="">
+<img title="" src="../misc/images/p6007ws21.png" alt="">
 
 - В отчёте описать, какими опциями **DHCP** сервера пользовались в данном пункте.
 
