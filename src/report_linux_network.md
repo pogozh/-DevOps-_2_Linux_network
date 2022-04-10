@@ -640,7 +640,7 @@ subnet 10.20.0.0 netmask 255.255.255.192
 
 *При запуске файла с этими правилами, ws22 должна "пинговаться" с r1*
 
-<img title="" src="file:///C:/DO2_LinuxNetwork-0/misc/images/p7008pingOk.png" alt="">
+<img title="" src="../misc/images/p7008pingOk.png" alt="">
 
 ##### Добавить в файл ещё два правила:
 
