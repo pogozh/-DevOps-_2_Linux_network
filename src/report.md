@@ -662,11 +662,11 @@ subnet 10.20.0.0 netmask 255.255.255.192
 
 - В отчёт поместить скрин с содержанием изменённого файла.
 
-<img title="" src="../misc/images/p7009firewall.png" alt="" data-align="inline">
+<img title="" src="../misc/images/p7009firewall.png" alt="">
 
 ##### Запускать файл также, как в Части 4
 
-<img title="" src="../misc/images/p7009sh.png" alt="" data-align="inline">
+<img title="" src="../misc/images/p7009sh.png" alt="">
 
 *Перед тестированием рекомендуется отключить сетевой интерфейс **NAT** (его наличие можно проверить командой `ip a`) в VirtualBox, если он включен*
 
