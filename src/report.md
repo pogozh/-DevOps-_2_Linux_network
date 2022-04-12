@@ -533,6 +533,12 @@ subnet 10.20.0.0 netmask 255.255.255.192
 <img title="" src="../misc/images/p6001.png" alt="">
 
 ##### Указать MAC адрес у ws11, для этого в *etc/netplan/00-installer-config.yaml* надо добавить строки: `macaddress: 10:10:10:10:10:BA`, `dhcp4: true`
+Сначала необходимо сменить макадрес на сетевом интерфейсе. Это можно сделать навсегда в Virtual Box в разделе "Сети", либо временно так:
+```bash
+sudo ifconfig enp0s8 down
+sudo ifconfig enp0s8 hw ether 10:10:10:10:10:ba
+sudo ifconfig enp0s8 up
+```
 
 Ректируем netplan'ы на ws11 и ws21
 
