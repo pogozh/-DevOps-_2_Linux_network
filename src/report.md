@@ -717,7 +717,7 @@ ws21: `ssh -L 9999:localhost:80 10.20.0.20`
 
 
 
-ws11: `ssh -L 9999:localhost:80 10.20.0.20`
+ws11: `ssh -R 9999:localhost:80 10.20.0.20`
 
 <img title="" src="../misc/images/p8_11to22.png" alt="">
 
