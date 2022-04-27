@@ -300,8 +300,7 @@ mh;  \
 
 - В отчёт поместить скрины с содержанием файла */etc/firewall* для каждой машины.
 
-<img src="misc/images/p4100.png" alt="ws: 1/etc/firewall.sh" />
-
+<img src="misc/images/p4100.png" alt="ws: 1/etc/firewall.sh" />  \
 <img src="misc/images/p41001.png" alt="ws2: /etc/firewall.sh" />
 
 ##### Запустить файлы на обеих машинах командами:
