@@ -167,20 +167,20 @@ HostMax 10.10.63.254
 
 - В отчёт поместить скрин с вызовом и выводом использованной команды.
 
-<img src="misc/images/p2002.png" alt="ip a" />
+<img src="../misc/images/p2002.png" alt="ip a" />
 
 ##### Описать сетевой интерфейс, соответствующий внутренней сети, на обеих машинах и задать следующие адреса и маски: ws1 - `192.168.100.10`, маска `/16`, ws2 - `172.24.116.8`, маска `/12`
 
 - В отчёт поместить скрины с содержанием изменённого файла *etc/netplan/00-installer-config.yaml* для каждой машины.
 
-<img src="misc/images/p2001.png" alt="netplan" />
+<img src="../misc/images/p2001.png" alt="netplan" />
 
 ##### Выполнить команду `netplan apply` для перезапуска сервиса сети
 
 - В отчёт поместить скрин с вызовом и выводом использованной команды.  \
   `sudo netplan apply`
 
-<img src="misc/images/p2003.png" alt="sudo netplan apply" />
+<img src="../misc/images/p2003.png" alt="sudo netplan apply" />
 
 #### 2.1. Добавление статического маршрута вручную
 
@@ -193,15 +193,15 @@ HostMax 10.10.63.254
   ws1:$`sudo ip route add 172.24.116.8 via 192.168.100.10 dev enp0s8`  \
   ws2:$`sudo ip route add 192.168.100.10 via 172.24.116.8 dev enp0s8`
 
-<img src="misc/images/p2004route.png" alt="sudo ip rout add" />
+<img src="../misc/images/p2004route.png" alt="sudo ip rout add" />
 
 ws1:$`ping -c 4 172.24.116.8`
 
-<img src="misc/images/p2004ws1ping.png" alt="ws1 ping" />
+<img src="../misc/images/p2004ws1ping.png" alt="ws1 ping" />
 
 ws2:$`ping -c 4  192.168.100.10`
 
-<img src="misc/images/p2004ws2ping.png" alt="ws2 ping" />  
+<img src="../misc/images/p2004ws2ping.png" alt="ws2 ping" />  
 
 #### 2.2. Добавление статического маршрута с сохранением
 
@@ -211,7 +211,7 @@ ws2:$`ping -c 4  192.168.100.10`
 
 - В отчёт поместить скрин с содержанием изменённого файла *etc/netplan/00-installer-config.yaml*.
 
-<img src="misc/images/p2200netplan.png" alt="netplan route" />
+<img src="../misc/images/p2200netplan.png" alt="netplan route" />
 
 ##### Пропинговать соединение между машинами
 
@@ -223,7 +223,7 @@ ws1:$`ping -c 3 172.24.116.8`  \
 ws2:$`sudo netplan apply`  \
 ws2:$`route -r`  \
 ws2:$`ping -c 4  192.168.100.10`  \
-<img src="misc/images/p2200ping.png" alt="ping" />
+<img src="../misc/images/p2200ping.png" alt="ping" />
 
 ## Part 3. Утилита **iperf3**
 
@@ -245,7 +245,7 @@ ws2:$`iperf3 -с  192.168.100.10 -f M` - ws2 подключается к ws1 в 
 
 - В отчёт поместить скрины с вызовом и выводом использованных команд.
 
-<img src="misc/images/p3200.png" alt="iperf3" />
+<img title="" src="../misc/images/p3200.png" alt="iperf3">
 
 ## Part 4. Сетевой экран
 
@@ -312,7 +312,7 @@ mh;  \
 
 - В отчёт поместить скрины с запуском обоих файлов.
 
-<img src="misc/images/p4101.png" alt="pings" />
+<img src="../misc/images/p4101.png" alt="pings" />
 
 - В отчёте описать разницу между стратегиями, применёнными в первом и втором файлах.
   
@@ -332,14 +332,14 @@ mh;  \
 
 - В отчёт поместить скрины с вызовом и выводом использованных команд **ping** и **nmap**.
 
-<img src="misc/images/p4200.png" alt="nmap" />
+<img src="../misc/images/p4200.png" alt="nmap" />
 
 ##### Сохранить дампы образов виртуальных машин
 
 ## Part 5. Статическая маршрутизация сети
 
 Сеть: \
-<img src="misc/images/part5_network.png" alt="part5_network" width="500"/>
+<img src="../misc/images/part5_network.png" alt="part5_network" width="500"/>
 
 ##### Поднять пять виртуальных машин (3 рабочие станции (ws11, ws21, ws22) и 2 роутера (r1, r2))
 
@@ -349,16 +349,16 @@ mh;  \
 
 - В отчёт поместить скрины с содержанием файла *etc/netplan/00-installer-config.yaml* для каждой машины.
 
-<img src="misc/images/p5101.png" alt="pings" />  \
-<img src="misc/images/p5102.png" alt="pings" />
+<img src="../misc/images/p5101.png" alt="pings" />  \
+<img src="../misc/images/p5102.png" alt="pings" />
 
 ##### Перезапустить сервис сети. Если ошибок нет, то командой `ip -4 a` проверить, что адрес машины задан верно. Также пропинговать ws22 с ws21. Аналогично пропинговать r1 с ws11.
 
 - В отчёт поместить скрины с вызовом и выводом использованных команд.
 
-<img src="misc/images/p5103.png" alt="pings" />  \
-<img src="misc/images/p5104.png" alt="pings" />  \
-<img src="misc/images/p5105.png" alt="pings" />
+<img src="../misc/images/p5103.png" alt="pings" />  \
+<img src="../misc/images/p5104.png" alt="pings" />  \
+<img src="../misc/images/p5105.png" alt="pings" />
 
 #### 5.2. Включение переадресации IP-адресов.
 
@@ -369,7 +369,7 @@ mh;  \
 
 - В отчёт поместить скрин с вызовом и выводом использованной команды.
 
-<img src="misc/images/p5201.png" alt="net.ipv4.ip_forward = 1" />
+<img src="../misc/images/p5201.png" alt="net.ipv4.ip_forward = 1" />
 
 ##### Откройте файл */etc/sysctl.conf* и добавьте в него следующую строку:
 
@@ -378,7 +378,7 @@ mh;  \
 
 - В отчёт поместить скрин с содержанием изменённого файла */etc/sysctl.conf*.
 
-<img src="misc/images/p5202.png" alt="net.ipv4.ip_forward = 1" />
+<img src="../misc/images/p5202.png" alt="net.ipv4.ip_forward = 1" />
 
 #### 5.3. Установка маршрута по-умолчанию
 
@@ -393,14 +393,14 @@ default via 10.10.0.1 dev eth0
 
 - В отчёт поместить скрин с содержанием файла *etc/netplan/00-installer-config.yaml*.
 
-<img src="misc/images/p5301.png"  />  \
-<img src="misc/images/p5302.png"  />
+<img src="../misc/images/p5301.png"  />  \
+<img src="../misc/images/p5302.png"  />
 
 ##### Вызвать `ip r` и показать, что добавился маршрут в таблицу маршрутизации
 
 - В отчёт поместить скрин с вызовом и выводом использованной команды.
 
-<img src="misc/images/p5303.png"  />
+<img src="../misc/images/p5303.png"  />
 
 ##### Пропинговать с ws11 роутер r2 и показать на r2, что пинг доходит. Для этого использовать команду:
 
@@ -408,7 +408,7 @@ default via 10.10.0.1 dev eth0
 
 - В отчёт поместить скрин с вызовом и выводом использованных команд.
 
-<img src="misc/images/p5304.png"  />
+<img src="../misc/images/p5304.png"  />
 
 #### 5.4. Добавление статических маршрутов
 
@@ -422,7 +422,7 @@ default via 10.10.0.1 dev eth0
 
 - В отчёт поместить скрины с содержанием изменённого файла *etc/netplan/00-installer-config.yaml* для каждого роутера.
 
-<img src="misc/images/p5401.png"  />
+<img src="../misc/images/p5401.png"  />
 
 ##### Вызвать `ip r` и показать таблицы с маршрутами на обоих роутерах. Пример таблицы на r1:
 
@@ -434,7 +434,7 @@ default via 10.10.0.1 dev eth0
 
 - В отчёт поместить скрин с вызовом и выводом использованной команды.
 
-<img src="misc/images/p5402.png"  />
+<img src="../misc/images/p5402.png"  />
 
 ##### Запустить команды на ws11:
 
@@ -442,7 +442,7 @@ default via 10.10.0.1 dev eth0
 
 - В отчёт поместить скрин с вызовом и выводом использованных команд.
 
-<img src="misc/images/p5403.png"  />
+<img src="../misc/images/p5403.png"  />
 
 - В отчёте объяснить, почему для адреса 10.10.0.0/18 был выбран маршрут, отличный от 0.0.0.0/0, хотя он попадает под маршрут по-умолчанию.  \
     Это можно обьяснить тем, что маршрут по умолчанию (defaul route) выполняется в случае отсутствия иных. А у нас таковые есть в netplan'е.
@@ -465,7 +465,7 @@ default via 10.10.0.1 dev eth0
 
 - В отчёт поместить скрины с вызовом и выводом использованных команд (tcpdump и traceroute).
 
-<img src="misc/images/p5501.png"  />
+<img src="../misc/images/p5501.png"  />
 
 - В отчёте, опираясь на вывод, полученный из дампа на r1, объяснить принцип работы построения пути при помощи **traceroute**.
 
@@ -534,7 +534,9 @@ subnet 10.20.0.0 netmask 255.255.255.192
 <img title="" src="../misc/images/p6001.png" alt="">
 
 ##### Указать MAC адрес у ws11, для этого в *etc/netplan/00-installer-config.yaml* надо добавить строки: `macaddress: 10:10:10:10:10:BA`, `dhcp4: true`
+
 Сначала необходимо сменить макадрес на сетевом интерфейсе. Это можно сделать навсегда в Virtual Box в разделе "Сети", либо временно так:
+
 ```bash
 sudo ifconfig enp0s8 down
 sudo ifconfig enp0s8 hw ether 10:10:10:10:10:ba
@@ -715,8 +717,6 @@ sudo ifconfig enp0s8 up
 ws21: `ssh -L 9999:localhost:80 10.20.0.20`
 
 <img title="" src="../misc/images/p8_21to22.png" alt="">
-
-
 
 ws11: `ssh -R 9999:localhost:80 10.20.0.20`
 
